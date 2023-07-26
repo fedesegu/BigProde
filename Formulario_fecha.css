@@ -1,0 +1,36 @@
+
+  .container {
+    padding-right:90%;
+    margin-top:80px;
+    display: grid;
+    width:100px;
+    
+  }
+  .input-group {
+    margin-bottom: 20px;
+  }
+
+  .input-group-text {
+    background-color: #a6c4a3;
+  }
+  
+  .form-control {
+    border-color: #26c411;
+    color: #343a40;
+  }
+  
+  .btn-primary {
+    background-color: #26c411;
+    color: #343a40;
+    margin-right: 49vh;
+    border-color: #343a40;
+  }
+
+  .btn-primary:hover {
+    background-color: white;
+    color:#26c411;
+    border-color: #343a40;
+  }
+
+  
+ 
