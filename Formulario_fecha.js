@@ -1,12 +1,11 @@
 
 
-let partido1Local = 2; //river
-let partido1Visitante = 0; //racing
-let partido2Local = 3; //indendiente
-let partido2Visitante = 1;
-let sanLorenzo = 1
+let river = 2;
+let racing = 0;
+let independiente = 3;
+let boca = 1; 
+let sanLorenzo = 1;
 let platense = 1; 
-
 
 registroPuntos = []
 
@@ -31,16 +30,27 @@ form.addEventListener('submit', function(e) {
 
     function calcularPuntos(a, b) {
     if (localPartido1 == a && visitantePartido1 == b ) {
-        registroPuntos.push(9)
+        return registroPuntos.push(9)
     } else if ( localPartido1 == a && a == b) {
-        registroPuntos.push(5)
+       return registroPuntos.push(5)
     } else if (localPartido1 == a && a > b) {
-        registrosPuntos.push(6)
-    } else if (localPartido1 == a && a < b) {
-        registrosPuntos.push(1)
+       return registroPuntos.push(6) 
+
+    } else if (localPartido1 !== a && localPartido2 !== b && localPartido1 > localPartido2) { 
+        return registroPuntos.push(4)
+    } else if (localPartido1 !== a && localPartido2 !== b && localPartido1 < localPartido2) { 
+        return registroPuntos.push(4)
+    } else if(localPartido1 == a && a <= b) {
+       return registroPuntos.push(1)
+    } else if (localPartido2 == b && a <= b) {
+        return registoPuntos.push(1)
     }
 }
-    
+
+       calcularPuntos(river, racing);
+       console.log(registroPuntos); 
+})
+   
    
    
     
@@ -57,16 +67,16 @@ form.addEventListener('submit', function(e) {
   
     // Aquí puedes hacer lo que desees con el objeto datosUsuario
     // Por ejemplo, puedes almacenarlo en un array
-    let registros = [];
-    registros.push(datosUsuario);
+    // let registros = [];
+    // registros.push(datosUsuario);
   
     // Mostrar los datos registrados en la consola (solo para verificar)
     // console.log(registros);
   
     // Puedes realizar otras acciones aquí, como enviar los datos al servidor, etc.
-    alert("Has enviado los datos. Pronto te contactaremos")
+    // alert("Has enviado los datos. Pronto te contactaremos")
     // Restablecer el formulario
-  form.reset();
-  });
-  console.log(registros);
+//   form.reset();
+//   });
+//   console.log(registros);
   
