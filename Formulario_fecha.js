@@ -28,26 +28,27 @@ form.addEventListener('submit', function(e) {
     let visitantePartido3 = form.querySelector('#seis').value;
   
 
-    function calcularPuntos(a, b) {
-    if (localPartido1 == a && visitantePartido1 == b ) {
+    function calcularPuntos(a, b, local, visitante) {
+    if (local == a && visitante == b ) {
         return registroPuntos.push(9)
-    } else if ( localPartido1 == a && a == b) {
+    } else if ( local == a && a == b) {
        return registroPuntos.push(5)
-    } else if (localPartido1 == a && a > b) {
+    } else if (local == a && a > b) {
        return registroPuntos.push(6) 
 
-    } else if (localPartido1 !== a && localPartido2 !== b && localPartido1 > localPartido2) { 
+    } else if (local !== a && visitante !== b && local > visitante) { 
         return registroPuntos.push(4)
-    } else if (localPartido1 !== a && localPartido2 !== b && localPartido1 < localPartido2) { 
+    } else if (local !== a && visitante !== b && local < visitante) { 
         return registroPuntos.push(4)
-    } else if(localPartido1 == a && a <= b) {
+    } else if(local == a && a <= b) {
        return registroPuntos.push(1)
-    } else if (localPartido2 == b && a <= b) {
+    } else if (visitante == b && a <= b) {
         return registoPuntos.push(1)
     }
 }
 
-       calcularPuntos(river, racing);
+       calcularPuntos(river, racing, localPartido1, visitantePartido1);
+       calcularPuntos(independiente, boca, localPartido2, visitantePartido2);
        console.log(registroPuntos); 
 })
    
